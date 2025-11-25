@@ -30,9 +30,9 @@ dependencies:
   record: ^6.1.2
   url_launcher: ^6.2.6
 
-  sherpa_onnx: ^1.12.17
-  # sherpa_onnx:
-  #   path: ../../flutter/sherpa_onnx
+  # sherpa_onnx: ^1.12.17
+  sherpa_onnx:
+    path: ../../flutter/sherpa_onnx
 
 dev_dependencies:
   flutter_test:
@@ -45,4 +45,4 @@ flutter:
 
   assets:
     - assets/
-    # - assets/sherpa-onnx-streaming-zipformer-bilingual-zh-en-2023-02-20/
+    - assets/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01/

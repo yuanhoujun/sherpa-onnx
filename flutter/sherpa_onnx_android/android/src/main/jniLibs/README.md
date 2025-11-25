@@ -20,4 +20,8 @@ export SHERPA_ONNX_ENABLE_C_API=ON
 ./build-android-arm64-v8a.sh
 
 cp -v build-android-arm64-v8a/install/lib/*.so flutter/sherpa_onnx_android/android/src/main/jniLibs/arm64-v8a/
+
+./build-android-armv7-eabi.sh
+
+cp -v build-android-armv7-eabi/install/lib/*.so flutter/sherpa_onnx_android/android/src/main/jniLibs/armeabi-v7a/
 ```

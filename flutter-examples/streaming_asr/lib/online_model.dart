@@ -62,6 +62,16 @@ Future<sherpa_onnx.OnlineModelConfig> getOnlineModelConfig(
         tokens: await copyAssetFile('$modelDir/tokens.txt'),
         modelType: 'zipformer',
       );
+    case 4:
+      final modelDir = 'assets/sherpa-onnx-streaming-zipformer-small-ctc-zh-int8-2025-04-01';
+      return sherpa_onnx.OnlineModelConfig(
+        zipformer2Ctc: sherpa_onnx.OnlineZipformer2CtcModelConfig(
+          model: await copyAssetFile('$modelDir/model.int8.onnx'),
+        ),
+        tokens: await copyAssetFile('$modelDir/tokens.txt'),
+        bpeVocab: await copyAssetFile('$modelDir/bbpe.model'),
+        modelType: 'zipformer2-ctc',
+      );
     default:
       throw ArgumentError('Unsupported type: $type');
   }
